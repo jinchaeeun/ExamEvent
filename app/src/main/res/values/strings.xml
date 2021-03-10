@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ExamEvent</string>
+    <string name="Button">TextView</string>
+    <string name="Button1">Button1</string>
+    <string name="EXAMINTENT">EXAMINTENT</string>
+    <string name="check_item">check_item</string>
+    <string name="red">red</string>
+    <string name="blue">blue</string>
+    <string name="radio_title">Select Color</string>
+    <string name="name">Enter name</string>
 </resources>
