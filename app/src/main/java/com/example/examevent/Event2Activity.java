@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethod;
@@ -16,11 +17,13 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 /* 입력할 때 올라오는 소프트키 입력 후 없애기 */
 public class Event2Activity extends AppCompatActivity {
+
     // Member Variable ----------------------------------
     private final Boolean      D   = true;
     private final String       TAG = "Event2";
@@ -29,6 +32,48 @@ public class Event2Activity extends AppCompatActivity {
     private EditText           nameETXT;
 
     private InputMethodManager  imm;        //소프트키보드 숨기는거
+
+    private long initTime;
+
+    //Alt-c Override Method 클릭
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        Log.i(TAG, "KEY DOWN ( " + keyCode );
+        //imm.hideSoftInputFromWindow(nameETXT.getWindowToken(),0);
+        switch (keyCode){
+            case KeyEvent.KEYCODE_BACK:
+                if(System.currentTimeMillis()-initTime > 3000){
+                    Toast.makeText(this,"종료하려면 한 번 더 누르세요", Toast.LENGTH_SHORT).show();
+                    //현재 시간 저장
+                    initTime=System.currentTimeMillis();
+                }
+                else{
+                    //3초 이내 Back버튼 두 번 눌린 경우 Activity 종료
+                    finish();
+                }
+                break;
+            case KeyEvent.KEYCODE_HOME:
+                break;
+        }
+        return true;    //내가 처리해서 끝내고싶다 return true
+        //215 page 뒤로가기버튼 두번 누르면 종료
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {    //마우스 버튼
+        switch (event.getAction()){
+            case MotionEvent.ACTION_DOWN:
+                Log.i(TAG, "TOUCH DOWN ( " + event.getX() + ", " + event.getY()+" )");
+                break;
+            case MotionEvent.ACTION_MOVE:
+                Log.i(TAG, "TOUCH MOVE ( " + event.getX() + ", " + event.getY()+" )");
+                break;
+            case MotionEvent.ACTION_UP:
+                Log.i(TAG, "TOUCH UP ( " + event.getX() + ", " + event.getY()+" )");
+                break;
+        }
+            return true;
+    }
 
     // Member Method - Activity's override --------------
     @Override

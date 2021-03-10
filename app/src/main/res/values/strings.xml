@@ -4,8 +4,21 @@
     <string name="Button1">Button1</string>
     <string name="EXAMINTENT">EXAMINTENT</string>
     <string name="check_item">check_item</string>
-    <string name="red">red</string>
-    <string name="blue">blue</string>
+    <string name="red">Red</string>
+    <string name="blue">Blue</string>
     <string name="radio_title">Select Color</string>
     <string name="name">Enter name</string>
+    <string name="modify">modify</string>
+    <string name="id">ID</string>
+    <string name="user">·USER</string>
+    <string name="enterID">Enter Id</string>
+    <string name="thema">·THEMA</string>
+    <string name="white">White</string>
+    <string name="dark">Dark</string>
+    <string name="select">·SELECT</string>
+    <string name="autosave">Auto Save</string>
+    <string name="autoconnectwifi">Auto Connect Wifi</string>
+    <string name="save">SAVE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="setting">SETTING</string>
 </resources>
