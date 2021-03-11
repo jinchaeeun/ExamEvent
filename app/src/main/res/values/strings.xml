@@ -10,12 +10,12 @@
     <string name="name">Enter name</string>
     <string name="modify">modify</string>
     <string name="id">ID</string>
-    <string name="user">·USER</string>
+    <string name="user">USER</string>
     <string name="enterID">Enter Id</string>
-    <string name="thema">·THEMA</string>
+    <string name="thema">THEMA</string>
     <string name="white">White</string>
     <string name="dark">Dark</string>
-    <string name="select">·SELECT</string>
+    <string name="select">SELECT</string>
     <string name="autosave">Auto Save</string>
     <string name="autoconnectwifi">Auto Connect Wifi</string>
     <string name="save">SAVE</string>

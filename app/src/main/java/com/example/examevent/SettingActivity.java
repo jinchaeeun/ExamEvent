@@ -32,7 +32,6 @@ public class SettingActivity extends AppCompatActivity {
     private RadioGroup      themaRGroup;
     private CheckBox        autoSaveCheck, autoWifiCheck;
     private RadioButton     whiteRBTN, darkRBTN,blueRBTN;
-    private Button          modifyBTN, saveBTN, cancelBTN;
 
     private InputMethodManager imm;        //소프트키보드 숨기는거
 
